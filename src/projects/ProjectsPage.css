@@ -1,0 +1,30 @@
+#ProjectsPage-container {
+    border: 3px solid pink;
+    margin: 15px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Project-container {
+    border: 3px solid salmon;
+    margin: 5px 5px;
+}
+
+img {
+    border: 3px solid black;
+    min-height: 50vh;
+    width: 25vw;
+}
+
+@media only screen and (min-width: 650px) {
+    #ProjectsPage-container {
+        border: 3px solid pink;
+        margin: 15px 15px;
+        flex-direction: row;
+    }
+    .Project-image-container {
+        min-height: 50vh;
+        width: 25vw;
+    }
+
+}
