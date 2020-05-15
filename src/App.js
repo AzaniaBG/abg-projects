@@ -1,33 +1,63 @@
 import React from 'react';
 import './App.css';
+import Project from './projects/Project';
+import Images from './projects/Images';
+import ProjectsData from './projects/ProjectsData';
 import ProjectsPage from './projects/ProjectsPage';
 import Context from './Context';
-// import QuizAppCover from '../src/screenshots/Quiz-App/QuizAppCover';
-import HorrorHouseCover from '../screenshots/Horror-House/HorrorHouseCover.png';
+import QuizAppCover from './screenshots/Quiz-App/QuizAppCover.jpg'
+import HorrorHouseCover from './screenshots/Horror-House/HorrorHouseCover.png';
 
 class App extends React.Component {
+
+  static contextType = Context;
+  
   constructor(props) {
     super(props)
-    this.state = {
-      images: {
-        // QuizApp: `${QuizAppCover}`,
-        HorrorHouse: `${HorrorHouseCover}`
+    const projects = ProjectsData;
 
-      }
-    }
+    this.state = {
+      images: [
+        {
+          id: 1,
+          cover: `${QuizAppCover}`, 
+        },
+        {
+          id: 2,
+          cover: `${HorrorHouseCover}`
+
+        }
+      ],
+      projects: ProjectsData.projects
+      }    
   }
+
   render() {
+    const { projects } = this.state;
+    const { images }= this.state;
+
     return (
       <div className="App">
-        {/* <header className="App-header">
-            Learn React
-        </header> */}
+        <header>
+          <h1>ABG Projects</h1>
+        </header>
         <main className="Main-container">
           <Context.Provider
           value={{
             images: this.state.images
           }}>
-          <ProjectsPage />
+          <Project>
+            <h2>
+              <a href={projects[0].liveLink} target="_blank">{projects[0].projectName}</a>
+            </h2>
+            <Images src={QuizAppCover} />
+            <figure>
+              <img src={QuizAppCover} />
+            </figure> 
+              <h3>{projects[0].description}</h3>
+              <h3>{projects[0].tech}</h3>
+              <h3><a href={projects[0].repo} target="_blank">GitHub Repo</a></h3>
+          </Project>
           </Context.Provider>
         </main>
       </div>
