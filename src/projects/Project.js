@@ -9,7 +9,7 @@ export default function Project(props) {
         <h2>{props.projectName}</h2>
         <figure className='Project-image-container'>
         <Images>
-            {props.children}
+        {props.children}
         </Images>
         </figure>
         <h3>{props.description}</h3>
