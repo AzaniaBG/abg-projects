@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
 import Project from './projects/Project';
-import Images from './projects/Images';
 import ProjectsData from './projects/ProjectsData';
-import ProjectsPage from './projects/ProjectsPage';
 import Context from './Context';
 import QuizAppCover from './screenshots/Quiz-App/QuizAppCover.jpg'
 import HorrorHouseCover from './screenshots/Horror-House/HorrorHouseCover.png';
@@ -50,13 +48,23 @@ class App extends React.Component {
             <h2>
               <a href={projects[0].liveLink} target="_blank">{projects[0].projectName}</a>
             </h2>
-            <Images src={QuizAppCover} />
             <figure>
               <img src={QuizAppCover} />
             </figure> 
               <h3>{projects[0].description}</h3>
               <h3>{projects[0].tech}</h3>
               <h3><a href={projects[0].repo} target="_blank">GitHub Repo</a></h3>
+          </Project>
+          <Project>
+            <h2>
+              <a href={projects[1].liveLink} target="_blank">{projects[1].projectName}</a>
+            </h2>
+            <figure>
+              <img src={HorrorHouseCover} />
+            </figure> 
+              <h3>{projects[1].description}</h3>
+              <h3>{projects[1].tech}</h3>
+              <h3><a href={projects[1].repo} target="_blank">GitHub Repo</a></h3>
           </Project>
           </Context.Provider>
         </main>
