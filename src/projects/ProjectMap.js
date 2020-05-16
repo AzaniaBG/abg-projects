@@ -20,15 +20,14 @@ export default class Project extends React.Component {
             // const image = images.map((image, i) => <img key={`image-${i}`} src={`${image.cover}`} /> )
          return (
             <Fragment>
-                <h2><a href={project.liveLink}>{project.projectName}</a></h2>
+                <h2><a href={project.liveLink} target='_blank' rel='noreferrer' >{project.projectName}</a></h2>
                 <figure className='Project-image-container'>
-                <img src={images[index].cover} />
-                {/* <Images /> */}
+                <img src={images[index].cover} alt={project.alt} />
                 <Images />
                 </figure>
                 <h3>{project.description}</h3>
                 <h3>{project.tech}</h3>
-                <h3><a href={project.repo}>GitHub Repo</a></h3>
+                <h3><a href={project.repo} target='_blank' rel='noreferrer'>GitHub Repo</a></h3>
             </Fragment>
             )
             }

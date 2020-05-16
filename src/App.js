@@ -12,7 +12,6 @@ class App extends React.Component {
   
   constructor(props) {
     super(props)
-    const projects = ProjectsData;
 
     this.state = {
       images: [
@@ -32,7 +31,6 @@ class App extends React.Component {
 
   render() {
     const { projects } = this.state;
-    const { images }= this.state;
 
     return (
       <div className="App">
@@ -49,22 +47,26 @@ class App extends React.Component {
               <a href={projects[0].liveLink} target="_blank" rel="noreferrer">{projects[0].projectName}</a>
             </h2>
             <figure>
-            <img src={QuizAppCover} />
+            <img src={QuizAppCover} alt={projects[0].alt} />
             </figure> 
-              <h3>{projects[0].description}</h3>
-              <h3>{projects[0].tech}</h3>
-              <h3><a href={projects[0].repo} target="_blank" rel="noreferrer">GitHub Repo</a></h3>
+            <section>
+            <h3>{projects[0].description}</h3>
+            <h3>{projects[0].tech}</h3>
+            <h3><a href={projects[0].repo} target="_blank" rel="noreferrer">GitHub Repo</a></h3>
+            </section>
           </Project>
           <Project>
             <h2>
               <a href={projects[1].liveLink} target="_blank" rel="noreferrer">{projects[1].projectName}</a>
             </h2>
             <figure>
-              <img src={HorrorHouseCover} />
+              <img src={HorrorHouseCover} alt={projects[1].alt} />
             </figure> 
+            <section>
               <h3>{projects[1].description}</h3>
               <h3>{projects[1].tech}</h3>
               <h3><a href={projects[1].repo} target="_blank" rel="noreferrer">GitHub Repo</a></h3>
+            </section>
           </Project>
           </Context.Provider>
         </main>

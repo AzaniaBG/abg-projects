@@ -12,9 +12,11 @@ export default function Project(props) {
         {props.children}
         </Images>
         </figure>
+        <section className='Project-details-container'>
         <h3>{props.description}</h3>
         <h3>{props.tech}</h3>
         <h3>{props.repo}</h3>
+        </section>
     </section>
     )
 }

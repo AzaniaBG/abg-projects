@@ -19,25 +19,18 @@ export default class ProjectsPage extends React.Component {
     return  (
         <section id='ProjectsPage-container'>
             <Project
-                projectName={<a href='https://azaniabg.github.io/quiz-app/' target='_blank'>Spanish Quiz App</a>}
-                repoLink={<a href='https://github.com/AzaniaBG/quiz-app' target='_blank'>GitHub Repo</a>}
+                projectName={<a href='#' target='_blank' rel='noopener noreferrer'>Spanish Quiz App</a>}
+                repoLink={<a href='https://github.com/AzaniaBG/quiz-app' target='_blank' rel='noopener noreferrer'>GitHub Repo</a>}
             />
             <section className='Project-container'>
             <h2>
                 Project Name/Live Link
             </h2>
             <figure className='Project-image-container'>
-            <img />
+            {this.props.children}
             </figure>
             <h3>Abstract</h3>
             <h3>Repo Link</h3>
-            </section>
-            <section className='Project-container'>
-            <Project
-                projectName={<a href={link}>{name}</a>}
-                repoLink={<a href={repo}>GitHub Repo</a>}
-            />
-            {/* <Images image={HorrorHouse} /> */}
             </section>
         </section>
         )
