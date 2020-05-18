@@ -19,7 +19,14 @@
 .Project-container {
   display: flex;
   flex-flow: column wrap;
-  
+  justify-content: space-evenly;
+}
+
+.Project-container img, figure {
+  border: black solid 1px;
+  width: 35%;
+  min-height: 50vw;
+  align-self: center;
 }
 
 
@@ -27,11 +34,42 @@
  
   .Project-container {
     display: flex;
-    flex-flow: row nowrap;
-    
+    flex-flow: row nowrap; 
   }
+  .Project-container header {
+    width: 35%;
+  }
+  .Project-container section {
+    width: 15%;
+  }
+  .Project-container img, figure {
+    border: black solid 1px;
+    width: 25%;
+    min-height: 35vw;
+    align-self: center;
+  }
+
 }
 @media only screen and (min-width: 1000px) {
-  
+  #Main-container {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .Project-container {
+    display: flex;
+    flex-flow: column; 
+  }
+  .Project-container header {
+    width: 50%;
+  }
+  .Project-container section {
+    width: 50%;
+  }
+  .Project-container img, figure {
+    border: black solid 1px;
+    width: 50%;
+    min-height: 35vw;
+    align-self: center;
+  }
   
 }

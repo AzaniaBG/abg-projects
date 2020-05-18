@@ -1,28 +1,32 @@
 #ProjectsPage-container {
     border: 3px solid pink;
     margin: 15px 15px;
+
 }
 
 .Project-container {
     border: 3px solid salmon;
     margin: 5px 5px;
-    display: grid;
+    width: 100%;
+    /* display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 5% auto 1fr;
     grid-template-areas:
     " header "
     " image "
-    " details "
+    " details " */
+    display: flex;
+    flex-flow: column nowrap;
+}
+.Project-container-1, 
+.Project-container-2 {
+    display: flex;
+    flex-flow: column nowrap;
 }
 .ProjectName-header .sub-grid-1 h2 {
     grid-area: header;
 }
-.Project-image-container {
-    display: flex;
-    flex-flow: row;
-    flex: 1 1 0;
-    grid-area: image;
-}
+
 .Project-details-container {
     grid-area: details;
 }
@@ -44,7 +48,37 @@ img {
     grid-column: 1;
     grid-row: 2;
 } */
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 700px) {
+    #Project-container section {
+        /* display: grid;
+        grid-template-areas: 1fr 1fr;
+        grid-template-rows: 75% 75%; */
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    #Project-container header {
+        width: 50%;
+        align-self: flex-start;
+    }
+    #Project-container img {
+        align-items: flex-end;
+        align-self: flex-end;
+        width: 25%;
+        height: auto;
+
+    }
+    .Project-details-container-1 {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start; 
+        width: 25%;
+        height: 50%;
+    }
+    .Project-image-container-1 {
+        width: 25%;
+    margin-right: 50px;    
+}
+    
     /* .Project-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -72,18 +106,20 @@ img {
     #ProjectsPage-container {
         display: flex;
         flex-flow: row nowrap;
-    }
+    } */
    
-    .Project-container {
+    /* .Project-container {
         display: flex;
         flex-flow: row nowrap;  
     } 
-    .Project-details-container, 
+    
     .Project-image-container {
         display: flex;
         flex-flow: row;
-        flex: 1 1 0;
+        flex: 2 1 0;
         grid-area: image;
-    } */
+    }  */
+
+
     
 }

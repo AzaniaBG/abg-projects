@@ -1,8 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './AppProject.css';
-import ProjectMap from './projects/ProjectMap';
-// import Project from './projects/Project';
+import './App.css';
 import ProjectsData from './projects/ProjectsData';
 import Context from './Context';
 import QuizAppCover from './screenshots/Quiz-App/QuizAppCover.jpg'
@@ -31,18 +29,33 @@ class App extends React.Component {
   }
 
   render() {
-    const { projects } = this.state;
-    const project = projects.map(project => {
-      const projectName = project.name;
+    const { projects, images } = this.state;
+    
+    const project = projects.map((project, i) => {
+      const projectName = project.projectName;
+      const liveLink = project.liveLink;
       const projectRepo = project.repo;
       const projectTech = project.tech
       const projectDescrip = project.description;
       return (
-        <section id={`${project.projectName}-${project.id}`} className={project.projectName}>
-          <h2>{projectName}</h2>
-          <h3>{projectRepo}</h3>
-          <h3>{projectTech}</h3>
+        <section key={`${project.projectName}-${project.id}`} className="Project-container">
+        <header>
+          <a href={liveLink} target="_blank" rel="noreferrer" >
+          <h2>
+          {projectName}
+          </h2>
+          </a>
           <article>{projectDescrip}</article>
+        </header>
+        <img src={images[i].cover} alt={project.alt} />
+        <section className='project-details'>
+          <h3>
+          <a href={projectRepo} target="_blank" rel="noreferrer" >
+            GitHub Repository
+          </a>
+          </h3>
+          <h3>Tech Used: {projectTech}</h3>
+        </section>
         </section>
       )
     });
@@ -58,7 +71,6 @@ class App extends React.Component {
             images: this.state.images
           }}>
           {project}
-          <h2>{ProjectMap}</h2>
 
           </Context.Provider>
 
