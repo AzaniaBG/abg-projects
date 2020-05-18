@@ -1,6 +1,8 @@
 import React from 'react';
-import './App.css';
-import Project from './projects/Project';
+import { NavLink } from 'react-router-dom';
+import './AppProject.css';
+import ProjectMap from './projects/ProjectMap';
+// import Project from './projects/Project';
 import ProjectsData from './projects/ProjectsData';
 import Context from './Context';
 import QuizAppCover from './screenshots/Quiz-App/QuizAppCover.jpg'
@@ -8,8 +10,7 @@ import HorrorHouseCover from './screenshots/Horror-House/HorrorHouseCover.png';
 
 class App extends React.Component {
 
-  static contextType = Context;
-  
+  static contextType = Context;  
   constructor(props) {
     super(props)
 
@@ -31,44 +32,36 @@ class App extends React.Component {
 
   render() {
     const { projects } = this.state;
+    const project = projects.map(project => {
+      const projectName = project.name;
+      const projectRepo = project.repo;
+      const projectTech = project.tech
+      const projectDescrip = project.description;
+      return (
+        <section id={`${project.projectName}-${project.id}`} className={project.projectName}>
+          <h2>{projectName}</h2>
+          <h3>{projectRepo}</h3>
+          <h3>{projectTech}</h3>
+          <article>{projectDescrip}</article>
+        </section>
+      )
+    });
 
     return (
       <div className="App">
         <header>
           <h1>ABG Projects</h1>
         </header>
-        <main className="Main-container">
+        <main id="Main-container">
           <Context.Provider
           value={{
             images: this.state.images
           }}>
-          <Project>
-            <h2>
-              <a href={projects[0].liveLink} target="_blank" rel="noreferrer">{projects[0].projectName}</a>
-            </h2>
-            <figure>
-            <img src={QuizAppCover} alt={projects[0].alt} />
-            </figure> 
-            <section>
-            <h3>{projects[0].description}</h3>
-            <h3>{projects[0].tech}</h3>
-            <h3><a href={projects[0].repo} target="_blank" rel="noreferrer">GitHub Repo</a></h3>
-            </section>
-          </Project>
-          <Project>
-            <h2>
-              <a href={projects[1].liveLink} target="_blank" rel="noreferrer">{projects[1].projectName}</a>
-            </h2>
-            <figure>
-              <img src={HorrorHouseCover} alt={projects[1].alt} />
-            </figure> 
-            <section>
-              <h3>{projects[1].description}</h3>
-              <h3>{projects[1].tech}</h3>
-              <h3><a href={projects[1].repo} target="_blank" rel="noreferrer">GitHub Repo</a></h3>
-            </section>
-          </Project>
+          {project}
+          <h2>{ProjectMap}</h2>
+
           </Context.Provider>
+
         </main>
       </div>
     );
