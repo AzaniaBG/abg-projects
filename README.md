@@ -1,5 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Azania Baker-Garcia ~ Projects Page, v.1
 
-## About
+Live Link: 
+
+### About
+This app showcases projects built by Azania Baker-Garcia. It will be updated as new projects are created.
+
+
+### Tech
+This app was bootstrapped with `Create React App`.
+* React
+* ES6
+* CSS3, CSS Grid
+* HTML5
+
+
+
+
 
 

@@ -26,7 +26,7 @@ class App extends React.Component {
         {
           id: 3,
           cover: `${PortfolioCover}`
-        }
+        },
 
       ],
       projects: ProjectsData.projects
