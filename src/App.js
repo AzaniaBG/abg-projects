@@ -76,6 +76,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>ABG Projects</h1>
+          <nav>FE | BE</nav>
         </header>
         <main id="Main-container">
           <Context.Provider
@@ -85,8 +86,8 @@ class App extends React.Component {
           {project}
 
           </Context.Provider>
-
         </main>
+        <footer>Contact ABG: </footer>
       </div>
     );
   }
