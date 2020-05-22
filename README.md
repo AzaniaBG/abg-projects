@@ -1,6 +1,6 @@
 ## Azania Baker-Garcia ~ Projects Page, v.1
 
-Live Link: 
+Live Link: https://app.netlify.com/sites/hopeful-swanson-cecb43/overview
 
 ### About
 This app showcases projects built by Azania Baker-Garcia. It will be updated as new projects are created.
