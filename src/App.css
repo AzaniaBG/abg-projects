@@ -4,7 +4,6 @@
 }
 
 .App-header {
-  /* background-color: #282c34; */
   background-color: #33415c;
   min-height: 20vh;
   display: flex;
@@ -15,9 +14,7 @@
   color: white;
 }
 
-/* body {
-  background-color: #002855;
-} */
+
 .Project-container {
   display: flex;
   flex-flow: column wrap;
@@ -45,7 +42,6 @@ article {
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  /* font-family: 'Jost', sans-serif; */
 }
 h2 {
   width: 100%;
@@ -63,37 +59,11 @@ a:hover {
 h2:hover {
   color:  white; 
   background-color: #33415c;
-
 }
 a:visited {
   color: #247ba0;
 }
-/* @media only screen and (min-width: 700px) {
- 
-  .Project-container {
-    display: flex;
-    flex-flow: row nowrap; 
-    margin-bottom: 25px;
-  }
-  .Project-container header {
-    width: 45%; 
-  }
-  article {
-    padding: 0px 10px 15px;
-    font-size: 1em;
-    flex: 1 1 auto;;
-  }
-  .Project-container section {
-    width: 15%;
-  }
-  .Project-container img {
-    border: black solid 1px;
-    width: 50%;
-    min-height: 35vw;
-    align-self: center;
-  }
 
-} */
 @media only screen and (min-width: 1000px) {
   #Main-container {
     display: grid;
@@ -135,6 +105,5 @@ a:visited {
     max-height: 35vw;
     align-self: center;
   }
-  
   
 }
