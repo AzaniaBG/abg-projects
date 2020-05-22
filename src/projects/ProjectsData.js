@@ -32,16 +32,7 @@ const ProjectsData = {
             tech: "1. HTML 5, CSS3, 2. a touch of JavaScript",
             repo: "https://github.com/AzaniaBG/Portfolio"
         },
-        {
-            id: 3,
-            projectName: "Dananza Internship",
-            liveLink: "",
-            
-            alt: "Error Page",
-            description: "View search results for a horror film, including YouTube trailers, or search for similar horror movies.",
-            tech: "1. React, 2. Next, 3. ES6, 4. CSS3",
-            repo: ""
-        }
+        
     ]
 
 }
