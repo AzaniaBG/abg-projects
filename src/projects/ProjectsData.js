@@ -28,7 +28,7 @@ const ProjectsData = {
             liveLink: "https://azaniabg.github.io/Portfolio/",
             
             alt: "ABG Portfolio",
-            description: "View search results for a horror film, including YouTube trailers, or search for similar horror movies.",
+            description: "View information about Azania Baker-Garcia's projects, contact information, knowledge.",
             tech: "1. HTML 5, CSS3, 2. a touch of JavaScript",
             repo: "https://github.com/AzaniaBG/Portfolio"
         },
