@@ -51,6 +51,7 @@ h2 {
 }
 a {
   text-decoration: none;
+  color: #33415c;
 }
 a:hover {
   color:  white; 
@@ -62,6 +63,14 @@ h2:hover {
 }
 a:visited {
   color: #247ba0;
+}
+h3 {
+  text-decoration: none;
+  color: #33415c;
+}
+h3 > a:hover {
+  color:  white; 
+  background-color: #33415c;
 }
 
 @media only screen and (min-width: 1000px) {
