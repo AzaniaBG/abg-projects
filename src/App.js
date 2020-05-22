@@ -5,6 +5,7 @@ import Context from './Context';
 import QuizAppCover from './screenshots/Quiz-App/QuizAppCover.jpg'
 import HorrorHouseCover from './screenshots/Horror-House/HorrorHouseCover.png';
 import PortfolioCover from './screenshots/Portfolio/Header_View_mobile.png';
+import ProjectsCover from './screenshots/Projects/Projects_Cover.jpg';
 
 class App extends React.Component {
 
@@ -25,6 +26,10 @@ class App extends React.Component {
         {
           id: 3,
           cover: `${PortfolioCover}`
+        },
+        {
+          id: 4,
+          cover: `${ProjectsCover}`
         },
 
       ],
