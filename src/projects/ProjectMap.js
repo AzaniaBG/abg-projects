@@ -11,31 +11,33 @@ export default class Project extends React.Component {
     }
     static contextType = Context;
     render() {
-        
-        const projects = ProjectsData.projects.map((project, index) => {
+        const projects = ProjectsData.projects;
+        const projectName = projects.map((project, i) => project.projectName[i])
+        // const projects = ProjectsData.projects.map((project, index) => {
             
-            const image = <img src={project.image} />
-            const images = this.context.images;
-            const HorrorHouse = images[0].cover;
-            // const image = images.map((image, i) => <img key={`image-${i}`} src={`${image.cover}`} /> )
-         return (
-            <Fragment>
-                <h2><a href={project.liveLink} target='_blank' rel='noreferrer' >{project.projectName}</a></h2>
-                <figure className='Project-image-container'>
-                <img src={images[index].cover} alt={project.alt} />
-                <Images />
-                </figure>
-                <h3>{project.description}</h3>
-                <h3>{project.tech}</h3>
-                <h3><a href={project.repo} target='_blank' rel='noreferrer'>GitHub Repo</a></h3>
-            </Fragment>
-            )
-            }
+        //     const image = <img src={project.image} />
+        //     const images = this.context.images;
+        //     const HorrorHouse = images[0].cover;
+        //     // const image = images.map((image, i) => <img key={`image-${i}`} src={`${image.cover}`} /> )
+        //  return (
+        //     <section>
+        //         <h2><a href={project.liveLink} target='_blank' rel='noreferrer' >{project.projectName}</a></h2>
+        //         <figure className='Project-image-container'>
+        //         <img src={images[index].cover} alt={project.alt} />
+        //         <Images />
+        //         </figure>
+        //         <h3>{project.description}</h3>
+        //         <h3>{project.tech}</h3>
+        //         <h3><a href={project.repo} target='_blank' rel='noreferrer'>GitHub Repo</a></h3>
+        //     </section>
+        //     )
+        //     }
 
-        );
+        // );
         return (
             <section className='Project-container'>
-                {projects}
+                {/* {projects} */}
+                <h2>{projectName}</h2>
                 {/* <h2>
                     {projectName}
                 </h2>
