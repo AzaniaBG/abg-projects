@@ -21,6 +21,16 @@ const ProjectsData = {
             description: "View search results for a horror film, including YouTube trailers, or search for similar horror movies.",
             tech: "1. Ecmascript 5, ES6, 2. jQuery, 3.HTML5, CSS3",
             repo: "https://github.com/AzaniaBG/Horror-House-V2"
+        },
+        {
+            id: 3,
+            projectName: "Portfolio",
+            liveLink: "https://azaniabg.github.io/Portfolio/",
+            image: "./screenshots/Horror-House/HomeSearchOptions.png",
+            alt: "ABG Portfolio",
+            description: "View search results for a horror film, including YouTube trailers, or search for similar horror movies.",
+            tech: "1. HTML 5, CSS3, 2. a touch of JavaScript",
+            repo: "https://github.com/AzaniaBG/Portfolio"
         }
     ]
 
