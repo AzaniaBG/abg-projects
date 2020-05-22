@@ -32,7 +32,16 @@ const ProjectsData = {
             tech: "1. HTML 5, CSS3, 2. a touch of JavaScript",
             repo: "https://github.com/AzaniaBG/Portfolio"
         },
-        
+        {
+            id: 4,
+            projectName: "Projects",
+            liveLink: "https://hopeful-swanson-cecb43.netlify.app",
+            
+            alt: "ABG Projects",
+            description: "View Azania Baker-Garcia's projects.",
+            tech: "1. React, 2. ES6, 3. CSS3, CSS Grid",
+            repo: "https://github.com/AzaniaBG/abg-projects"
+        },
     ]
 
 }
