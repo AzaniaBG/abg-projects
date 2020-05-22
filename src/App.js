@@ -39,6 +39,7 @@ class App extends React.Component {
       const projectDescrip = project.description;
       return (
         <section key={`${project.projectName}-${project.id}`} className="Project-container">
+        
         <header>
           <a href={liveLink} target="_blank" rel="noreferrer" >
           <h2>
@@ -47,7 +48,9 @@ class App extends React.Component {
           </a>
           <article>{projectDescrip}</article>
         </header>
+        <figure>
         <img src={images[i].cover} alt={project.alt} />
+        </figure>
         <section className='project-details'>
           <h3>
           <a href={projectRepo} target="_blank" rel="noreferrer" >
@@ -62,7 +65,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <header>
+        <header className="App-header">
           <h1>ABG Projects</h1>
         </header>
         <main id="Main-container">

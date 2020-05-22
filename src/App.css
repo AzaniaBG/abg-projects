@@ -1,55 +1,99 @@
+
 .App {
   text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  background-color: #33415c;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 2em;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* body {
+  background-color: #002855;
+} */
 .Project-container {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
+  margin: 10px 10px;
+  border: 3px solid #002855;
+  border-radius: 5%;
+  background-color: white;
 }
 
-.Project-container img, figure {
+.Project-container img {
   border: black solid 1px;
-  width: 35%;
+  width: 50%;
   min-height: 50vw;
   align-self: center;
 }
+article {
+  padding: 0px 10px 15px;
+  font-size: 1em;
+  flex: 1 3 auto;;
+}
+.Project-details h3 {
+  margin: 0px 10px
+}
+h1 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+  /* font-family: 'Jost', sans-serif; */
+}
+h2 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  padding: 5px 5px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color:  white; 
+  background-color: #33415c;
+}
+h2:hover {
+  color:  white; 
+  background-color: #33415c;
 
-
-@media only screen and (min-width: 700px) {
+}
+a:visited {
+  color: #247ba0;
+}
+/* @media only screen and (min-width: 700px) {
  
   .Project-container {
     display: flex;
     flex-flow: row nowrap; 
+    margin-bottom: 25px;
   }
   .Project-container header {
-    width: 35%;
+    width: 45%; 
+  }
+  article {
+    padding: 0px 10px 15px;
+    font-size: 1em;
+    flex: 1 1 auto;;
   }
   .Project-container section {
     width: 15%;
   }
-  .Project-container img, figure {
+  .Project-container img {
     border: black solid 1px;
-    width: 25%;
+    width: 50%;
     min-height: 35vw;
     align-self: center;
   }
 
-}
+} */
 @media only screen and (min-width: 1000px) {
   #Main-container {
     display: flex;
@@ -60,16 +104,34 @@
     flex-flow: column; 
   }
   .Project-container header {
-    width: 50%;
+    width: 100%;
+    align-self: center;
+  }
+  h2 {
+    width: 25%;
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    padding: 5px 5px;
   }
   .Project-container section {
-    width: 50%;
+    width: 100%;
   }
-  .Project-container img, figure {
+  article {
+    font-size: 1.5em;
+    padding: 0px 25px;
+    
+  }
+  .Project-container figure {
+    height: 35vw;
+    width: auto;
+  }
+  .Project-container img {
     border: black solid 1px;
     width: 50%;
     min-height: 35vw;
+    max-height: 35vw;
     align-self: center;
   }
+  
   
 }
