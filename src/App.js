@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import './App.css';
 import ProjectsData from './projects/ProjectsData';
 import Context from './Context';
@@ -46,7 +45,7 @@ class App extends React.Component {
         <section key={`${project.projectName}-${project.id}`} className="Project-container">
         
         <header>
-          <a href={liveLink} target="_blank" rel="noreferrer" >
+          <a href={liveLink} target="_blank" rel="noopener noreferrer"  >
           <h2>
           {projectName}
           </h2>
@@ -58,7 +57,7 @@ class App extends React.Component {
         </figure>
         <section className='project-details'>
           <h3>
-          <a href={projectRepo} target="_blank" rel="noreferrer" >
+          <a href={projectRepo} target="_blank" rel="noopener noreferrer"  >
             GitHub Repository
           </a>
           </h3>
