@@ -96,13 +96,16 @@ a:visited {
 } */
 @media only screen and (min-width: 1000px) {
   #Main-container {
-    display: flex;
-    flex-flow: row nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto auto;
   }
   .Project-container {
     display: flex;
-    flex-flow: column; 
+    flex-flow: column wrap;
+    min-width: 50%; 
   }
+  
   .Project-container header {
     width: 100%;
     align-self: center;
